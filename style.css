@@ -225,4 +225,48 @@ footer {
     margin-bottom: 10px;
     color: #ffd700;
   }
-  
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+  .section-buttons {
+      flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .section-button {
+      width: 100%; /* Full width on small screens */
+      height: auto; /* Adjust height for content */
+  }
+
+  .nav ul {
+      flex-direction: column; /* Stack nav items vertically */
+      gap: 10px; /* Adjust gap */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+      padding: 0.5em;
+  }
+
+  .header-content h1 {
+      font-size: 1.5em; /* Smaller font for smaller screens */
+  }
+
+  nav ul li a {
+      font-size: 1em; /* Smaller font size for links */
+  }
+
+  main {
+      padding: 0.5em;
+  }
+
+  footer {
+      flex-direction: column; /* Stack footer sections */
+      align-items: center; /* Center footer content */
+  }
+
+  .navfoot, .contact-info, .contact-form {
+      max-width: 100%;
+      flex: 1 1 100%;
+  }
+}
