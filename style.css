@@ -68,7 +68,7 @@ main {
     align-items: center;
 }
 #sec{
-    margin-right: 70px;
+    margin-left: 10px;
     align-items: center;
 }
 
@@ -165,7 +165,7 @@ footer {
   }
   
   .footer-nav a {
-    color: #ffd700;
+    color: #800020;
     text-decoration: none;
     margin: 5px 0; /* Add space between links */
   }

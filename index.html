@@ -5,53 +5,121 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Confession Planner</title>
  <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="header.css">
 
  <style>
+  .nav-container {
+      position: relative;
+  }
+
+  .hamburger {
+      display: none; /* Hide by default */
+      background: none;
+      border: none;
+      font-size: 2em;
+      color: #FFD700;
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 0; /* Position at the top */
+      z-index: 1000;
+  }
+
+  header {
+      position: relative;
+      padding: 1em;
+      background-color: #800020; /* Burgundy color */
+      color: #FFD700; /* Yellow color */
+      text-align: center;
+  }
 
   .nav {
       list-style: none;
       padding: 0;
       display: flex;
-      justify-content: center;
-      gap: 15px;
+      justify-content: space-around;
+      margin: 0;
+      gap: 10px;
   }
-  
+
   .nav li {
       display: inline;
   }
-  
+
   .nav a {
       color: #FFD700; /* Yellow color */
       text-decoration: none;
       font-size: 1.2em;
   }
-  
+
   .nav a:hover {
       text-decoration: underline;
   }
-  
-      </style>
+
+  @media (max-width: 768px) {
+      .hamburger {
+          display: block; /* Show the hamburger menu button */
+      }
+
+      .nav {
+          display: none; /* Hide the menu by default on small screens */
+          flex-direction: column;
+          width: 100%; /* Full width for the menu */
+          background-color: #800020; /* Burgundy background for menu */
+          position: absolute;
+          top: -100%; /* Position below the header */
+          left: 0;
+          
+          z-index: 999;
+      }
+
+      .nav.show {
+          display: flex; /* Show the menu when toggled */
+      }
+
+      .nav li {
+          display: block; /* Stack menu items vertically */
+          text-align: center;
+          padding: 10px 0;
+          border-bottom: 1px solid #FFD700;
+      }
+  }
+</style>
   
 
 </head>
 <body>
- <header>
-   <div class="header-content">
-     <h1>Welcome to the Confession Planner</h1>
-            <nav class="nav">
-                <a href="home.html">Home</a>
-                <a href="index.html">Self Assessment</a>
-                <a href="prayer.html">Confession Prayers</a>
-<a href="rules.html">10 Commandments & 6 Gospel Words</a>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="header-content">
+        
+        <div class="nav-container">
+            <button class="hamburger" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+            <ul class="nav">
+                <li><a href="home.html">ዋና ገፅ <br> Home</a></li>
+                <li><a href="index.html">ራስን መገምገሚያ ገጽ <br>Self Assessment</a></li>
+                <li><a href="prayer.html">የኑዛዜ ጸሎቶች<br> Confession Prayers</a></li>
+                <li><a href="rules.html">ትእዛዛት<br> Rules</a></li>
+            </ul>
+        </div>
+        
+        <h1>ወደ የኑዛዜ እቅድ ማዉጫ እንኳን በደህና መጡ</h1>
+        <h1>Welcome to the Confession Planner</h1>
+    </div>
+</header>
 
     <main>
-        <div class="section-buttons">
-            <button class="section-button" onclick="showSection('god')">Sins Against God</button>
-            <button class="section-button" onclick="showSection('neighbor')">Sins Against My Neighbor</button>
-            <button class="section-button" onclick="showSection('myself')">Sins Against Myself</button>
+        <div class="section-buttonss">
+            <button class="section-buttons" class="con" onclick="showSection('god')">
+              በእግዚአብሔር ላይ የሚፈጸሙ ኃጢአቶች<br> Sins Against God
+            </button>
+            <button class="section-buttons" id="con" onclick="showSection('neighbor')">
+              በወንድሜ ላይ የሰራሁት ሀጢያት <br> Sins Against My Neighbor
+            </button>
+            <button class="section-buttons" class="con" onclick="showSection('myself')">
+              በራሴ ላይ የፈጸምኳቸው ኃጢአቶች <br> Sins Against Myself
+            </button>
         </div>
         <form id="confessionForm">
             <section id="questionSection">
@@ -61,35 +129,40 @@
         </form>
         <div id="result"></div>
     </main>
-<footer>
-    <div  class="navfoot">
-    <nav class="footer-nav">
-      <a href="home.html">Home</a>
-      <a href="index.html">Self Assessment</a>
-      <a href="prayer.html">Confession Prayers</a>
-      <a href="rules.html">10 Commandments & 6 Gospel Words</a>
-    </nav>
+<footer style="list-style: none;">
+  <div class="navfoot">
+    <h2 style="color: #FFD700;">መምሪያ አውታር<br> Navigation </h2>
+      <nav class="footer-nav">
+       <a href="home.html">ዋና ገፅ <br> Home</a>
+       <a href="index.html">ራስን መገምገሚያ ገጽ <br>Self Assessment</a>
+       <a href="prayer.html">የኑዛዜ ጸሎቶች<br> Confession Prayers</a>
+       <a href="rules.html">ትእዛዛት<br> Rules</a>
+      </nav>
   </div>
-  <div class="contact-info">
-    <ul>
-      <li>Phone: +123 456 7890</li>
-      <li>Telegram: @confessionplanner</li>
-      <li>Instagram: <a href="https://instagram.com/confessionplanner" target="_blank">@confessionplanner</a></li>
-      <li>YouTube: <a href="https://youtube.com/confessionplanner" target="_blank">Confession Planner Channel</a></li>
-    </ul>
+  <div class="contact-info" >
+    <h2 style="color: #FFD700;">የግንኙነት መረጃ<br> Contact Info</h2>
+      <ul style="color: #800020;">
+          <li>Phone: +123 456 7890</li>
+          <li>Telegram: @confessionplanner</li>
+          <li>Instagram: <a href="https://instagram.com/confessionplanner" target="_blank">@confessionplanner</a></li>
+          <li>YouTube: <a href="https://youtube.com/confessionplanner" target="_blank">Confession Planner Channel</a></li>
+      </ul>
   </div>
-  
-
-    <div class="contact-form">
-      <h2>Contact Us</h2>
+  <div class="contact-form">
+      <h2>እባኮትን ያግኙን <br> Contact Us</h2>
       <form>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit">Send</button>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+          <button type="submit">Send</button>
       </form>
-    </div>
-  </footer>
+  </div>
+</footer>
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', function () {
+        document.querySelector('.nav').classList.toggle('show');
+    });
+</script>
     <script src="script.js"></script>
 </body>
 </html>

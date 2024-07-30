@@ -7,44 +7,107 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="style.css">
     <style>
+        .nav-container {
+            position: relative;
+        }
+    
+        .hamburger {
+            display: none; /* Hide by default */
+            background: none;
+            border: none;
+            font-size: 2em;
+            color: #FFD700;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 0; /* Position at the top */
+            z-index: 1000;
+        }
+    
+        header {
+            position: relative;
+            padding: 1em;
+            background-color: #800020; /* Burgundy color */
+            color: #FFD700; /* Yellow color */
+            text-align: center;
+        }
+    
         .nav {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.nav li {
-    display: inline;
-}
-
-.nav a {
-    color: #FFD700; /* Yellow color */
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.nav a:hover {
-    text-decoration: underline;
-}
-
-
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            gap: 10px;
+        }
+    
+        .nav li {
+            display: inline;
+        }
+    
+        .nav a {
+            color: #FFD700; /* Yellow color */
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+    
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block; /* Show the hamburger menu button */
+            }
+    
+            .nav {
+                display: none; /* Hide the menu by default on small screens */
+                flex-direction: column;
+                width: 100%; /* Full width for the menu */
+                background-color: #800020; /* Burgundy background for menu */
+                position: absolute;
+                top: -100%; /* Position below the header */
+                left: 0;
+                
+                z-index: 999;
+            }
+    
+            .nav.show {
+                display: flex; /* Show the menu when toggled */
+            }
+    
+            .nav li {
+                display: block; /* Stack menu items vertically */
+                text-align: center;
+                padding: 10px 0;
+                border-bottom: 1px solid #FFD700;
+            }
+        }
     </style>
 </head>
 <body>
-    <header class="header">
-        <h1>Welcome to the Confession Planner</h1>
-        <nav class="nav">
-                            <a href="home.html">Home</a>                
-            <a href="index.html">Self Assessment</a>                
-            <a href="prayer.html">Confession Prayers</a> 
-            <a href="rules.html">10 Commandments & 6 Gospel Words</a>           
-          </nav>
+    <header>
+        <div class="header-content">
+            
+            <div class="nav-container">
+                <button class="hamburger" aria-label="Toggle navigation">
+                    &#9776;
+                </button>
+                <ul class="nav">
+                    <li><a href="home.html">ዋና ገፅ <br> Home</a></li>
+                    <li><a href="index.html">ራስን መገምገሚያ ገጽ <br>Self Assessment</a></li>
+                    <li><a href="prayer.html">የኑዛዜ ጸሎቶች<br> Confession Prayers</a></li>
+                    <li><a href="rules.html">ትእዛዛት<br> Rules</a></li>
+                </ul>
+            </div>
+            
+            <h1>ወደ የኑዛዜ እቅድ ማዉጫ እንኳን በደህና መጡ</h1>
+            <h1>Welcome to the Confession Planner</h1>
+        </div>
     </header>
     <main>
         <section>
-            <h2>10 Commandments</h2>
+            <h1>አሥሩ ትእዛዛት <br><br>10 Commandments</h1>
             <ol>
                 <li>ከኔ በቀር ሌላ አምላክ አታምልክ። (ዘፀ 20÷1_6)<br><br>
                     You shall have no other gods before me.</li>
@@ -73,59 +136,64 @@
             <h2>The six words of the gospel</h2>
             
             <ol>
-                <li>ለተራበ ማብላት፣ ማቴ( 25÷35) Love</li>
-                <li>የተጠማ ማጠጣት፣ ማቴ(25 ÷3) Faith</li>
-                <li>እንግዳ መቀበል፣ ማቴ( 25 ÷ 35) Hope</li>
+                <li>ለተራበ ማብላት፣ ማቴ( 25÷35) </li>
+                <li>የተጠማ ማጠጣት፣ ማቴ(25 ÷3) </li>
+                <li>እንግዳ መቀበል፣ ማቴ( 25 ÷ 35) </li>
                 <li>የታረዘ ማልበስ፣ ማቴ ( 25_ 35)
                     Forgiveness</li>
-                <li>የታመመን ማየት፣ ማቴ( 25÷36) Repentance</li>
-                <li>የታሰረ መጠየቅ፣ ማቴ(25÷36) Grace</li>
+                <li>የታመመን ማየት፣ ማቴ( 25÷36) </li>
+                <li>የታሰረ መጠየቅ፣ ማቴ(25÷36) </li>
             </ol>
             <h2>ስድስቱ ህግጋተ-ወንጌል</h2>
             <h2>The six laws of the gospel</h2>
             <ol>
                 <li>በወንድምህ ላይ በከንቱ አትቆጣ። (ማቴ 5÷22_17)
-                    Love </li>
+                     </li>
                 <li>ወደ ሴት አትመልከት በልብህም አታመንዝር። ( ማቴ5÷27)
-                    Faith</li>
-                <li>ሚስትህን ካለ ዝሙት ምክንያት አትፍታ። ( ማቴ 5÷32) Hope</li>
+                    </li>
+                <li>ሚስትህን ካለ ዝሙት ምክንያት አትፍታ። ( ማቴ 5÷32) </li>
                 <li>ፈፅመህ አትማል። ማቴ (5_÷34)
-                    Forgiveness</li>
-                <li>ክፉን በክፉ አትመልስ። (ማቴ_ 5÷39) Repentance</li>
-                <li>ጠላትህን ውደድ። ማቴ(5÷45)  Grace</li>
+                    </li>
+                <li>ክፉን በክፉ አትመልስ። (ማቴ_ 5÷39) </li>
+                <li>ጠላትህን ውደድ። ማቴ(5÷45)  </li>
             </ol>
             <p>እግዚአብሔር የህጎቹ ጠባቂ ያድርገን፣
                 ቃሉ ወራሽ ከሳሽ እንዳይሆንብን በልቦናችን ፅላት ያሳድርልን አሜን።</p>
         </section>
     </main>
-    <footer>
-        <div  class="navfoot">
-        <nav class="footer-nav">
-          <a href="home.html">Home</a>
-          <a href="index.html">Self Assessment</a>
-          <a href="prayer.html">Confession Prayers</a>
-          <a href="rules.html">10 Commandments & 6 Gospel Words</a>
-        </nav>
-      </div>
-      <div class="contact-info">
-        <ul>
-          <li>Phone: +123 456 7890</li>
-          <li>Telegram: @confessionplanner</li>
-          <li>Instagram: <a href="https://instagram.com/confessionplanner" target="_blank">@confessionplanner</a></li>
-          <li>YouTube: <a href="https://youtube.com/confessionplanner" target="_blank">Confession Planner Channel</a></li>
-        </ul>
-      </div>
-      
-  
-        <div class="contact-form">
-          <h2>Contact Us</h2>
-          <form>
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit">Send</button>
-          </form>
+    <footer style="list-style: none;">
+        <div class="navfoot">
+          <h2 style="color: #FFD700;">መምሪያ አውታር<br> Navigation </h2>
+            <nav class="footer-nav">
+             <a href="home.html">ዋና ገፅ <br> Home</a>
+             <a href="index.html">ራስን መገምገሚያ ገጽ <br>Self Assessment</a>
+             <a href="prayer.html">የኑዛዜ ጸሎቶች<br> Confession Prayers</a>
+             <a href="rules.html">ትእዛዛት<br> Rules</a>
+            </nav>
         </div>
-      </footer>
+        <div class="contact-info" >
+          <h2 style="color: #FFD700;">የግንኙነት መረጃ<br> Contact Info</h2>
+            <ul style="color: #800020;">
+                <li>Phone: +123 456 7890</li>
+                <li>Telegram: @confessionplanner</li>
+                <li>Instagram: <a href="https://instagram.com/confessionplanner" target="_blank">@confessionplanner</a></li>
+                <li>YouTube: <a href="https://youtube.com/confessionplanner" target="_blank">Confession Planner Channel</a></li>
+            </ul>
+        </div>
+        <div class="contact-form">
+            <h2>እባኮትን ያግኙን <br> Contact Us</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </footer>
 </body>
+<script>
+    document.querySelector('.hamburger').addEventListener('click', function () {
+        document.querySelector('.nav').classList.toggle('show');
+    });
+</script>
 </html>

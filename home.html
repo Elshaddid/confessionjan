@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Confession Planner</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="header.css">
+    
     <style>
       .nav-container {
           position: relative;
@@ -38,7 +38,7 @@
           display: flex;
           justify-content: space-around;
           margin: 0;
-          gap: 1px;
+          gap: 10px;
       }
   
       .nav li {
@@ -66,7 +66,7 @@
               width: 100%; /* Full width for the menu */
               background-color: #800020; /* Burgundy background for menu */
               position: absolute;
-              top: 0; /* Position below the header */
+              top: -100%; /* Position below the header */
               left: 0;
               
               z-index: 999;
@@ -95,14 +95,14 @@
                     &#9776;
                 </button>
                 <ul class="nav">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="index.html">Self Assessment</a></li>
-                    <li><a href="prayer.html">Confession Prayers</a></li>
-                    <li><a href="rules.html">10 Commandments & 6 Gospel Words</a></li>
+                    <li><a href="home.html">ዋና ገፅ <br> Home</a></li>
+                    <li><a href="index.html">ራስን መገምገሚያ ገጽ <br>Self Assessment</a></li>
+                    <li><a href="prayer.html">የኑዛዜ ጸሎቶች<br> Confession Prayers</a></li>
+                    <li><a href="rules.html">ትእዛዛት<br> Rules</a></li>
                 </ul>
             </div>
             
-            <h1>ወደ የኑዛዜ እቅድ አውጪ እንኳን በደህና መጡ</h1>
+            <h1>ወደ የኑዛዜ እቅድ ማዉጫ እንኳን በደህና መጡ</h1>
             <h1>Welcome to the Confession Planner</h1>
         </div>
     </header>
@@ -110,28 +110,30 @@
     <main>
         <div class="section-buttons">
             <button class="section-button" id="con" onclick="window.location.href='prayer.html'">
-                Confessional Prayers
+              የኑዛዜ ጸሎቶች<br> Confession Prayers
             </button>
             <button class="section-button" id="sec" onclick="window.location.href='index.html'">
-                Self-Assessment
+              ራስን መገምገሚያ  <br>Self Assessment
             </button>
             <button class="section-button" onclick="window.location.href='rules.html'">
-                Rules
+              ትእዛዛት<br> Rules
             </button>
         </div>
     </main>
 
-    <footer>
+    <footer style="list-style: none;">
         <div class="navfoot">
+          <h2 style="color: #FFD700;">መምሪያ አውታር<br> Navigation </h2>
             <nav class="footer-nav">
-                <a href="home.html">Home</a>
-                <a href="index.html">Self Assessment</a>
-                <a href="prayer.html">Confession Prayers</a>
-                <a href="rules.html">10 Commandments & 6 Gospel Words</a>
+             <a href="home.html">ዋና ገፅ <br> Home</a>
+             <a href="index.html">ራስን መገምገሚያ ገጽ <br>Self Assessment</a>
+             <a href="prayer.html">የኑዛዜ ጸሎቶች<br> Confession Prayers</a>
+             <a href="rules.html">ትእዛዛት<br> Rules</a>
             </nav>
         </div>
-        <div class="contact-info">
-            <ul>
+        <div class="contact-info" >
+          <h2 style="color: #FFD700;">የግንኙነት መረጃ<br> Contact Info</h2>
+            <ul style="color: #800020;">
                 <li>Phone: +123 456 7890</li>
                 <li>Telegram: @confessionplanner</li>
                 <li>Instagram: <a href="https://instagram.com/confessionplanner" target="_blank">@confessionplanner</a></li>
@@ -139,7 +141,7 @@
             </ul>
         </div>
         <div class="contact-form">
-            <h2>Contact Us</h2>
+            <h2>እባኮትን ያግኙን <br> Contact Us</h2>
             <form>
                 <input type="text" name="name" placeholder="Your Name" required />
                 <input type="email" name="email" placeholder="Your Email" required />
