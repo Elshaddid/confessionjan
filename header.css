@@ -32,3 +32,18 @@
     transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+    .section-buttonss {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+  
+    .section-buttons {
+        width: 100%; /* Full width on small screens */
+        height: auto; /* Adjust height for content */
+    }
+  
+    .nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 10px; /* Adjust gap */
+    }
+  }
