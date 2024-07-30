@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+       
+    <meta charset="UTF-8" />
+       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       
+    <title>Home - Confession Planner</title>
+       
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="header.css">
+   <style>
+
+.nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Change to space-around for equal gaps */
+    gap: 1px;
+    margin: 0;
+    /*width: 100%;*/
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    color: #FFD700; /* Yellow color */
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+
+    </style>
+
+  </head>
+  <body>
+       
+    <header>
+             
+      <div class="header-content">
+                   
+        
+        <h1>ወደ የኑዛዜ እቅድ አውጪ እንኳን በደህና መጡ</h1>
+        <h1>Welcome to the Confession Planner</h1>
+                   
+        <nav class="nav">
+                          <a href="home.html">Home</a>                
+          <a href="index.html">Self Assessment</a>                
+          <a href="prayer.html">Confession Prayers</a> 
+          <a href="rules.html">10 Commandments & 6 Gospel Words</a>           
+        </nav>
+               
+      </div>
+         
+    </header>
+       
+    <main>
+             
+      <div class="section-buttons">
+                   
+        <button
+          class="section-button"
+          id="con"
+          onclick="window.location.href='prayer.html'"
+        >
+          Confessional Prayers
+        </button>
+                   
+        <button
+          class="section-button"
+          id="sec"
+          onclick="window.location.href='index.html'"
+        >
+          Self-Assessment
+        </button>
+
+        <button
+          class="section-button"
+         
+          onclick="window.location.href='rules.html'"
+        >
+          Rules
+        </button>
+               
+      </div>
+         
+    </main>
+    <footer>
+      <div  class="navfoot">
+      <nav class="footer-nav">
+        <a href="home.html">Home</a>
+        <a href="index.html">Self Assessment</a>
+        <a href="prayer.html">Confession Prayers</a>
+        <a href="rules.html">10 Commandments & 6 Gospel Words</a>
+      </nav>
+    </div>
+    <div class="contact-info">
+      <ul>
+        <li>Phone: +123 456 7890</li>
+        <li>Telegram: @confessionplanner</li>
+        <li>Instagram: <a href="https://instagram.com/confessionplanner" target="_blank">@confessionplanner</a></li>
+        <li>YouTube: <a href="https://youtube.com/confessionplanner" target="_blank">Confession Planner Channel</a></li>
+      </ul>
+    </div>
+    
+
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>
